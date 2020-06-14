@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/details"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:id="@+id/profileInfo"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:id="@+id/profilePhoto"
+        android:src="@drawable/abc"/>
+
+    <LinearLayout
+        android:id="@+id/nameAndScreenName"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:id="@+id/userName"
+            android:gravity="left"
+            android:text="name"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/profilePhoto" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="#6d6b6b"
+            android:id="@+id/screenName"
+            android:gravity="left"
+            android:text="screen name"
+            android:textSize="17dp"
+            android:layout_alignBottom="@+id/profilePhoto"
+            android:layout_toEndOf="@+id/profilePhoto" />
+
+
+    </LinearLayout>
+</LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tweetText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@android:color/black"
+        android:text="tweet"
+        android:textSize="20dp"
+        android:layout_below="@+id/profileInfo"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/uploadedPhoto"
+        android:layout_below="@+id/tweetText"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/abc"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"/>
+
+
+    <LinearLayout
+        android:id="@+id/endInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_below="@+id/uploadedPhoto"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:id="@+id/box1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="#6d6b6b"
+                android:id="@+id/retweet"
+                android:gravity="left"
+                android:text="RETWEETS"
+                android:textSize="17dp"
+                android:editable="false"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="#19CF86"
+                android:id="@+id/retweetCount"
+                android:gravity="left|right"
+                android:text="8"
+                android:textSize="25dp"
+                android:editable="false"
+                android:layout_below="@+id/retweet"
+                android:layout_alignParentStart="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/box2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="#6d6b6b"
+                android:id="@+id/likes"
+                android:gravity="left"
+                android:text="LIKES"
+                android:textSize="17dp"
+                android:layout_alignTop="@+id/retweet"
+                android:layout_below="@+id/uploadedPhoto"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="#19CF86"
+                android:id="@+id/likeCount"
+                android:gravity="left|right"
+                android:text="8"
+                android:textSize="25dp"
+                android:editable="false"
+                android:layout_below="@+id/likes"
+                android:layout_alignStart="@+id/likes" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
